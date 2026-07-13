@@ -1,6 +1,6 @@
 {
   "name": "tech-journey-blog",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
   "postCreateCommand": "npm install",
   "forwardPorts": [3000],
   "portsAttributes": {

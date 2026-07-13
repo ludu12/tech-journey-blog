@@ -64,8 +64,10 @@ This pushes to their fork on GitHub — normal git, nothing Codespaces-specific.
 - **Node version**: Next.js 16 requires Node ≥ 20.9. Without a devcontainer
   config this repo would fall back to Codespaces' default image, which isn't
   guaranteed to have a new-enough Node active, and students would hit an
-  `EBADENGINE` warning/error on `npm install`. Fixed via
-  `.devcontainer/devcontainer.json`, which pins Node 20.
+  `EBADENGINE` warning/error on `npm install`. Fixed by pinning Node 24 in
+  `.devcontainer/devcontainer.json`, `package.json` (`engines.node`), and
+  `.nvmrc` — 24 is also Vercel's current default Node runtime for new
+  projects, so Codespaces and the Vercel build both use the same version.
 - **Codespaces quota**: 120 free core-hours/month per personal account
   (~60 hours on a 2-core machine, the default size). Fine for a single session
   or even a few weeks of tinkering, but remind students to **stop** (not just
