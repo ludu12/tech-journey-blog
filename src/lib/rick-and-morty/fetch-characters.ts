@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {ApiUrl, Queries} from './queries';
 
 export type Character = {
@@ -20,26 +19,30 @@ export type Info = {
 
 export async function fetchCharacters(page: number, search: string): Promise<{ errors: any[], characters: Character[], info: Info | null }> {
   try {
-    const response = await axios.post(
-        ApiUrl,
-        {
-          query: Queries.fetchCharacters,
-          variables: {
-            page: page,
-            search: search
-          }
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
+    const res = await fetch(ApiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: Queries.fetchCharacters,
+        variables: {
+          page: page,
+          search: search
         }
-    );
+      })
+    });
+
+    if (!res.ok) {
+      throw new Error(`Request failed with status ${res.status}`);
+    }
+
+    const data = await res.json();
 
     return {
-      errors: response.data.errors,
-      characters: response.data.data?.characters?.results,
-      info: response.data.data?.characters?.info
+      errors: data.errors,
+      characters: data.data?.characters?.results,
+      info: data.data?.characters?.info
     };
   } catch (e) {
     console.error(e);

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {ApiUrl, Queries} from './queries';
 
 const TYPE_BADGE_URL = 'https://veekun.com/dex/media/types/en/';
@@ -62,24 +61,28 @@ const mapper = (x: any): Pokemon => {
 export async function fetchPokemonByGen(genId: number[] | number): Promise<{ generation: number[] | null, errors: any[], pokemon: Pokemon[] }> {
   const generation = Array.isArray(genId) ? genId : [genId]
   try {
-    const response = await axios.post(
-        ApiUrl,
-        {
-          query: Queries.fetchPokemonByGen,
-          variables: {
-            gen_ids: generation
-          }
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
+    const res = await fetch(ApiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: Queries.fetchPokemonByGen,
+        variables: {
+          gen_ids: generation
         }
-    );
+      })
+    });
+
+    if (!res.ok) {
+      throw new Error(`Request failed with status ${res.status}`);
+    }
+
+    const data = await res.json();
 
     return {
-      errors: response.data.errors,
-      pokemon: response.data.data?.pokemon_v2_pokemonspecies?.map?.(mapper) || [],
+      errors: data.errors,
+      pokemon: data.data?.pokemon_v2_pokemonspecies?.map?.(mapper) || [],
       generation
     };
   } catch (e) {
@@ -90,24 +93,28 @@ export async function fetchPokemonByGen(genId: number[] | number): Promise<{ gen
 
 export async function fetchPokemonByIds(id: string[] | string) {
   try {
-    const response = await axios.post(
-        ApiUrl,
-        {
-          query: Queries.fetchPokemonById,
-          variables: {
-            ids: Array.isArray(id) ? id : [id]
-          }
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
+    const res = await fetch(ApiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: Queries.fetchPokemonById,
+        variables: {
+          ids: Array.isArray(id) ? id : [id]
         }
-    );
+      })
+    });
+
+    if (!res.ok) {
+      throw new Error(`Request failed with status ${res.status}`);
+    }
+
+    const data = await res.json();
 
     return {
-      errors: response.data.errors,
-      pokemon: response.data.data?.pokemon_v2_pokemonspecies?.map?.(mapper) || []
+      errors: data.errors,
+      pokemon: data.data?.pokemon_v2_pokemonspecies?.map?.(mapper) || []
     };
   } catch (e) {
     console.error(e);
