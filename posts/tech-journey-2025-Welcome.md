@@ -8,7 +8,7 @@ Welcome to Tech Journey! Let's make some cool sites!
 What is your name, your favorite pokemon or something you like.
 
 - Rhea - Blaziken  
-- Lynnea - Titanic
+- [Lynnea](https://tech-journey-blog-lynnea.vercel.app/) - Titanic
 - Zakiya - Pikachu
 - Alejandro - Registeel
 - Adrian - Football (Bears)
