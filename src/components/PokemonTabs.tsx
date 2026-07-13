@@ -13,11 +13,11 @@ const PokemonTabs: React.FC<PokemonTabsProps> = ({generations}) => {
   const pathname = usePathname()
 
   return (
-      <div className="tabs">
+      <div className="tabs tabs-lift tabs-lg">
         {generations.map(gen => {
           const href = `/pokemon/${gen}`;
           return (
-              <Link key={gen} className={clsx('tab tab-lg tab-lifted', {'tab-active': href === pathname})} href={href}>
+              <Link key={gen} className={clsx('tab', {'tab-active': href === pathname})} href={href}>
                 Gen {gen}
               </Link>
           )
