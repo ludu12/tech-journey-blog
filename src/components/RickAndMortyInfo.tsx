@@ -39,8 +39,8 @@ const RickAndMortyInfo: React.FC<RickAndMortyInfoProps> = (props) => {
           }}>
             <FaAngleLeft size={24}/>
           </button>
-          <div className="form-control w-full max-w-xs">
-            <input type="text" placeholder="Search for a character" className="input input-bordered w-full max-w-xs"
+        <div className="w-full max-w-xs">
+          <input type="text" placeholder="Search for a character" className="input w-full max-w-xs"
                    onChange={(e) => {
                      debouncedSearch(e.target.value)
                    }

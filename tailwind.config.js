@@ -1,18 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     daisyui: {
-        themes: [
-            "fantasy",
-            {
-                "mytheme": {
-                    "primary": "#14b8a6",
-                    "secondary": "#d926a9",
-                    "accent": "#1fb2a6",
-                    "neutral": "#e5e7eb",
-                    "base-100": "#f3f4f6",
-                },
-            },
-        ],
+        themes: ["fantasy", "dark"],
     },
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -38,5 +27,5 @@ module.exports = {
             }
         },
     },
-    plugins: [require("@tailwindcss/typography"), require("daisyui")],
+    plugins: [require("@tailwindcss/typography"), require("daisyui").default],
 }
