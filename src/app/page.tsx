@@ -22,18 +22,7 @@ export default function Home() {
           <p className={'prose'}>
             Hey I&apos;m Liam. This is my site.
           </p>
-          <div className={'my-4'}>
-            <i>
-              Check out the repo{' '}
-                <Link href={'https://github.com/ludu12/tech-journey-blog'}>
-                  <button className={'btn btn-sm btn-primary'}>
-                      <span className={'text-primary-content'}>
-                        here
-                      </span>
-                  </button>
-                </Link>
-            </i>
-          </div>
+
         </section>
 
         <div className={'my-4'}>
