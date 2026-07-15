@@ -13,14 +13,14 @@ What is your name, your favorite pokemon or something you like.
 - Mathani - Track
 - Ava - Gengar
 - Samuel - Dragonair
-- [Dominic](https://tech-journey-blog-lesbians.vercel.app/) - Espurr
+- Dominic - Espurr
 - Olive - Emolga
 - Jesse - Haxorus
 - Karar - Psyduck
 - Musau - Eevee
 - Rania - Mewtwo
 - Sheeta - Gengar
-- Liam - Wishiwashi
+- Liam - [Wishiwashi](https://tech-journey-blog-2.vercel.app/)
 - Marcus - Geodude
 - Carter - Bidoof
 - [Danaya](https://tech-journey-blog-gamma.vercel.app/) - mimikyu
