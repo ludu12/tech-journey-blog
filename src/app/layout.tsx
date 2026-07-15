@@ -16,7 +16,7 @@ const description = 'This my personal site';
 type NavLink = { title: string; href: string }
 const links: NavLink[] = [
   {title: 'South Park', href: '/pokemon'},
-  {title: 'Rick and Morty', href: '/rick-and-morty'}
+  {title: 'Big Mouth', href: '/rick-and-morty'}
 ]
 
 type SocialLinksType = {
