@@ -20,7 +20,7 @@ What is your name, your favorite pokemon or something you like.
 - Musau - Eevee
 - Rania - Mewtwo
 - Sheeta - Gengar
-- Liam - Wishiwashi
+- Liam - [Wishiwashi](https://tech-journey-blog-2.vercel.app/)
 - Marcus - Geodude
 - Carter - Bidoof
 - [Danaya](https://tech-journey-blog-gamma.vercel.app/) - mimikyu
