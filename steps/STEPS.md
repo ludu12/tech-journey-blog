@@ -44,8 +44,8 @@ The `present/things-to-change/` folder has a numbered set of exercises
 ## 5. Commit and push from the Codespace
 
 ```bash
-git add -A
-git commit -m "make it mine"
+git add -A # Puts all changed files into staging
+git commit -m "make it mine" # or some other message
 git push
 ```
 
