@@ -35,7 +35,7 @@ export default function Home() {
             <Image className={'rounded-2xl transition-transform duration-300 hover:scale-105'} src={imageUrl} alt={'My Image'} width={500} height={500}/>
           </div>
           <div className={'rounded-3xl border border-pink-200 bg-gradient-to-br from-pink-100 to-purple-100 p-6 shadow-lg shadow-pink-100'}>
-            <h2 className={'text-2xl font-semibold'}>Fun stuff I&apos;m into</h2>
+            <h2 className={'text-2xl font-semibold text-pink-600'}>Fun stuff I&apos;m into</h2>
             <p className={'mt-3 text-gray-700'}>
               I&apos;m learning, creating, and exploring new ideas every day. This site is where I share my journey, projects, and little moments of inspiration.
             </p>
