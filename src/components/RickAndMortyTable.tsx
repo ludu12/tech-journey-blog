@@ -1,57 +1,26 @@
-'use client';
-
-import React from 'react';
-import {QueryClient} from "@tanstack/query-core";
-import {QueryClientProvider, useQuery} from "@tanstack/react-query";
-import {fetchCharacters} from "@/lib/rick-and-morty";
-import {useSearchParams} from "next/navigation";
-import RickAndMortyCharacter from "@/components/RickAndMortyCharacter";
-import RickAndMortyInfo from "@/components/RickAndMortyInfo";
-
-// Create a client
-const queryClient = new QueryClient()
-
-interface RickAndMortyTableProps {
-}
-
-const RickAndMortyTable: React.FC<RickAndMortyTableProps> = () => {
-  const searchParams = useSearchParams()
-  const initialPage = Number(searchParams.get('page'))
-  const search = searchParams.get('search') || '';
-  const page = isNaN(initialPage) ? 1 : initialPage;
-
-  const {data} = useQuery({
-    queryKey: ['characters', page, search],
-    queryFn: async () => {
-      return await fetchCharacters(page, search)
-    }
-  })
+export default async function RickAndMortyTable(){
+  const res = await fetch('https://rickandmortyapi.com/api/character')
+  if (!res.ok) return <div>Failed to load characters</div>
+  const data = await res.json()
 
   return (
-      <div className={'flex flex-col items-center'}>
-        <RickAndMortyInfo info={data?.info} search={search} page={page}/>
-        <div className={'flex'}>
-          <div className={'flex-1'}>
-            <ul className={'flex items-center justify-center flex-wrap mx-4'}>
-              {data?.characters.map(c => {
-                return (
-                    <li key={c.id}>
-                      <RickAndMortyCharacter character={c}/>
-                    </li>
-                )
-              })}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <table className={'table w-full'}>
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Species</th>
+        </tr>
+        </thead>
+        <tbody>
+        {data.results.map((c: any) => (
+            <tr key={c.id}>
+              <td>{c.name}</td>
+              <td>{c.status}</td>
+              <td>{c.species}</td>
+            </tr>
+        ))}
+        </tbody>
+      </table>
   )
-};
-
-const Wrapper = () => {
-  return (
-      <QueryClientProvider client={queryClient}>
-        <RickAndMortyTable/>
-      </QueryClientProvider>
-  );
 }
-export default Wrapper;

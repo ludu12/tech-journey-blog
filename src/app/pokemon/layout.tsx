@@ -3,7 +3,8 @@ import PokemonTabs from "@/components/PokemonTabs";
 
 export default async function PokemonLayout(props: { children: React.ReactNode }) {
   const generations = await fetchGenerations()
-  const validGenerations = generations.generations.map(x => x.id);
+  const gens = generations && (generations as any).generations ? (generations as any).generations : [{id: 1}]
+  const validGenerations = gens.map((x: any) => x.id);
 
   return (
       <div className={'w-full flex flex-col items-center'}>

@@ -1,29 +1,11 @@
-'use client';
+import Link from 'next/link'
 
-import React from 'react';
-import Link from "next/link";
-import {usePathname} from "next/navigation";
-import {clsx} from "@/utils/styles";
-
-interface PokemonTabsProps {
-  generations: number[]
-}
-
-const PokemonTabs: React.FC<PokemonTabsProps> = ({generations}) => {
-  const pathname = usePathname()
-
+export default function PokemonTabs({generations}:{generations:number[]}){
   return (
-      <div className="tabs tabs-lift tabs-lg">
-        {generations.map(gen => {
-          const href = `/pokemon/${gen}`;
-          return (
-              <Link key={gen} className={clsx('tab', {'tab-active': href === pathname})} href={href}>
-                Gen {gen}
-              </Link>
-          )
-        })}
-
+      <div className={'flex gap-2 flex-wrap justify-center py-4'}>
+        {generations.map(g => (
+            <Link key={g} href={`/pokemon/${g}`} className={'btn btn-sm'}>{`Gen ${g}`}</Link>
+        ))}
       </div>
-  );
-};
-export default PokemonTabs;
+  )
+}

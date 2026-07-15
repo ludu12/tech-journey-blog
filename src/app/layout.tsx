@@ -10,13 +10,22 @@ TODO:  Change these things along with:
   - favicon.ico in /public
  */
 const font = Karla({ weight: '400', subsets: ['latin']})
-const title = 'Luke\'s Site';
+const title = 'Ava\'s Site';
 const description = 'This my personal site';
-const links = [
-  {title: 'Pokemon', href: '/pokemon'},
+
+type NavLink = { title: string; href: string }
+const links: NavLink[] = [
+  {title: 'South Park', href: '/pokemon'},
   {title: 'Rick and Morty', href: '/rick-and-morty'}
-];
-const SocialLinks = {
+]
+
+type SocialLinksType = {
+  twitter: string
+  github: string
+  instagram: string
+  email: string
+}
+const SocialLinks: SocialLinksType = {
   twitter: 'https://x.com/dunscombe_luke',
   github: '#github',
   instagram: '#insta',
