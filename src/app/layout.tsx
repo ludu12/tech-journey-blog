@@ -1,6 +1,6 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import {Karla} from 'next/font/google';
+import {Karla, Pacifico} from 'next/font/google';
 import NavBarContainer from "@/components/NavBarContainer";
 import Footer from "@/components/Footer";
 
@@ -10,6 +10,7 @@ TODO:  Change these things along with:
   - favicon.ico in /public
  */
 const font = Karla({ weight: '400', subsets: ['latin']})
+const funFont = Pacifico({ weight: '400', subsets: ['latin'] })
 const title = 'Ava\'s Site';
 const description = 'This my personal site';
 
@@ -48,7 +49,7 @@ export default function RootLayout({
   return (
       <html lang="en" className={'h-full'} data-theme="dark">
       <body className={`${font.className} flex flex-col min-h-screen`}>
-      <NavBarContainer title={title} links={links}>
+      <NavBarContainer title={title} links={links} titleClassName={funFont.className}>
         <main className={'flex-1 max-w-6xl py-8 md:py-16 px-4 md:px-0'}>{children}</main>
       </NavBarContainer>
       <Footer socialLinks={SocialLinks}/>
