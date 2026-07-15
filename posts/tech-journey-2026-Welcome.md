@@ -22,7 +22,7 @@ What is your name, your favorite pokemon or something you like.
 - Sheeta - Gengar
 - Liam - [Wishiwashi](https://tech-journey-blog-2.vercel.app/)
 - Marcus - Geodude
-- Carter - Bidoof
+- Carter - (https://tech-journey-blog-omega.vercel.app/)
 - [Danaya](https://tech-journey-blog-gamma.vercel.app/) - mimikyu
 - Ryan - Ryquaza
 - [Ayla](https://tech-journey-blog-navy.vercel.app/) - Cubone
