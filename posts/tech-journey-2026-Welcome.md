@@ -25,6 +25,6 @@ What is your name, your favorite pokemon or something you like.
 - Carter - Bidoof
 - [Danaya](https://tech-journey-blog-gamma.vercel.app/) - mimikyu
 - Ryan - Ryquaza
-- Ayla - Cubone
+- [Ayla](https://tech-journey-blog-navy.vercel.app/) - Cubone
 - Gentry - Wightbaking
 
