@@ -7,7 +7,7 @@ Welcome to Tech Journey! Let's make some cool sites!
 
 What is your name, your favorite pokemon or something you like.
 
-- Luke (facilatator) - Snorlax
+- [Luke (facilatator) - Snorlax](https://tech-journey-blog.vercel.app/)
 - Mayank (helper) - Psyduck
 - Sierra (helper) - Cats
 - Mathani - Track
