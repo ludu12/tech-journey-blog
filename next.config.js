@@ -8,11 +8,16 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'rickandmortyapi.com',
+                hostname: 'img.pokemondb.net',
             },
+
             {
                 protocol: 'https',
                 hostname: 'raw.githubusercontent.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'i.pinimg.com',
             }
         ],
     },
