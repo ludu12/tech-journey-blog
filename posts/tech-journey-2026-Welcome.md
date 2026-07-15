@@ -13,7 +13,7 @@ What is your name, your favorite pokemon or something you like.
 - Mathani - Track
 - Ava - Gengar
 - Samuel - Dragonair
-- Dominic - Espurr
+- [Dominic](https://tech-journey-blog-lesbians.vercel.app/) - Espurr
 - Olive - Emolga
 - Jesse - Haxorus
 - Karar - Psyduck
