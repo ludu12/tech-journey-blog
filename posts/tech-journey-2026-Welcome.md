@@ -23,7 +23,7 @@ What is your name, your favorite pokemon or something you like.
 - Liam - Wishiwashi
 - Marcus - Geodude
 - Carter - Bidoof
-- Danaya - Cats
+- [Danaya](https://tech-journey-blog-gamma.vercel.app/) - mimikyu
 - Ryan - Ryquaza
 - Ayla - Cubone
 - Gentry - Wightbaking
