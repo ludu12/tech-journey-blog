@@ -46,6 +46,15 @@ export default function Home() {
         </div>
 
         <section className={'prose'}>
+          <h2>Pages</h2>
+          <ul>
+            <li>
+              <Link href={'/Genshin'}>Genshin</Link>
+            </li>
+            <li>
+              <Link href={'/blog'}>Blog</Link>
+            </li>
+          </ul>
           <h2>Blog</h2>
           <ul>
             {allPostsData.map(({id, date, title}) => (
