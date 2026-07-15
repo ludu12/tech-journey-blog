@@ -25,7 +25,11 @@ export default function Home() {
           <div className={'my-4'}>
             <i>
               Check out the repo{' '}
-                <Link href={'https://github.com/MusauKabongo/tech-journey-blog'}>
+                <Link
+                  href={'https://github.com/ludu12/tech-journey-blog'}
+                  target={'_blank'}
+                  rel={'noopener noreferrer'}
+                >
                   <button className={'btn btn-sm btn-primary'}>
                       <span className={'text-primary-content'}>
                         here
