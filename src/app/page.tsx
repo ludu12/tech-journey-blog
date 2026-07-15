@@ -26,7 +26,7 @@ export default function Home() {
             <i>
               Check out the repo{' '}
                 <Link
-                  href={'https://github.com/MusauKabongo/tech-journey-blog'}
+                  href={'https://github.com/ludu12/tech-journey-blog'}
                   target={'_blank'}
                   rel={'noopener noreferrer'}
                 >
@@ -51,7 +51,7 @@ export default function Home() {
             {allPostsData.map(({id, date, title}) => (
                 <li key={id}>
                   <div>
-                    <Link href={`/posts/${id}`}>{title}</Link>
+                    <Link href={`/blog/${id}`}>{title}</Link>
                     <br/>
                     <small>
                       <Date dateString={date}/>
