@@ -12,10 +12,6 @@ TODO:  Change these things along with:
 const font = Karla({ weight: '400', subsets: ['latin']})
 const title = 'Luke\'s Site';
 const description = 'This my personal site';
-const links = [
-  {title: 'Pokemon', href: '/pokemon'},
-  {title: 'Rick and Morty', href: '/rick-and-morty'}
-];
 const SocialLinks = {
   twitter: 'https://x.com/dunscombe_luke',
   github: '#github',
