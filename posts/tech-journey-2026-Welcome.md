@@ -16,7 +16,7 @@ What is your name, your favorite pokemon or something you like.
 - [Dominic](https://tech-journey-blog-lesbians.vercel.app/) - Espurr
 - Olive - Emolga
 - Jesse - Haxorus
-- Karar - Psyduck
+- Karar - https://tech-journey-blog-sable.vercel.app/
 - Musau - Eevee
 - Rania - Mewtwo
 - Sheeta - Gengar
